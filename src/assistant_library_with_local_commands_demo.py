@@ -42,7 +42,7 @@ logging.basicConfig(
 
 def power_off_pi():
     aiy.audio.say('Good bye!')
-    subprocess.call('sudo shutdown now', shell=True)
+    subprocess.call('sudo shutdown -h now', shell=True)
 
 
 def reboot_pi():
@@ -55,7 +55,7 @@ def say_ip():
     aiy.audio.say('My IP address is %s' % ip_address.decode('utf-8'))
 
 def hal():
-    aiy.audio.say('Sorry, I can\'t do that.')
+    aiy.audio.say('I\'m Sorry. I\'m afraid I can\'t do that.')
 
 def process_event(assistant, event):
     status_ui = aiy.voicehat.get_status_ui()
